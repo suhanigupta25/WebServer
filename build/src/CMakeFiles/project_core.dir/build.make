@@ -83,10 +83,24 @@ src/CMakeFiles/project_core.dir/RequestParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project_core.dir/RequestParser.cpp.s"
 	cd /home/suhani/web_server/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/suhani/web_server/src/RequestParser.cpp -o CMakeFiles/project_core.dir/RequestParser.cpp.s
 
+src/CMakeFiles/project_core.dir/Server.cpp.o: src/CMakeFiles/project_core.dir/flags.make
+src/CMakeFiles/project_core.dir/Server.cpp.o: /home/suhani/web_server/src/Server.cpp
+src/CMakeFiles/project_core.dir/Server.cpp.o: src/CMakeFiles/project_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/suhani/web_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/project_core.dir/Server.cpp.o"
+	cd /home/suhani/web_server/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/project_core.dir/Server.cpp.o -MF CMakeFiles/project_core.dir/Server.cpp.o.d -o CMakeFiles/project_core.dir/Server.cpp.o -c /home/suhani/web_server/src/Server.cpp
+
+src/CMakeFiles/project_core.dir/Server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/project_core.dir/Server.cpp.i"
+	cd /home/suhani/web_server/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/suhani/web_server/src/Server.cpp > CMakeFiles/project_core.dir/Server.cpp.i
+
+src/CMakeFiles/project_core.dir/Server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project_core.dir/Server.cpp.s"
+	cd /home/suhani/web_server/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/suhani/web_server/src/Server.cpp -o CMakeFiles/project_core.dir/Server.cpp.s
+
 src/CMakeFiles/project_core.dir/main.cpp.o: src/CMakeFiles/project_core.dir/flags.make
 src/CMakeFiles/project_core.dir/main.cpp.o: /home/suhani/web_server/src/main.cpp
 src/CMakeFiles/project_core.dir/main.cpp.o: src/CMakeFiles/project_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/suhani/web_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/project_core.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/suhani/web_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/project_core.dir/main.cpp.o"
 	cd /home/suhani/web_server/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/project_core.dir/main.cpp.o -MF CMakeFiles/project_core.dir/main.cpp.o.d -o CMakeFiles/project_core.dir/main.cpp.o -c /home/suhani/web_server/src/main.cpp
 
 src/CMakeFiles/project_core.dir/main.cpp.i: cmake_force
@@ -97,32 +111,18 @@ src/CMakeFiles/project_core.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project_core.dir/main.cpp.s"
 	cd /home/suhani/web_server/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/suhani/web_server/src/main.cpp -o CMakeFiles/project_core.dir/main.cpp.s
 
-src/CMakeFiles/project_core.dir/server.cpp.o: src/CMakeFiles/project_core.dir/flags.make
-src/CMakeFiles/project_core.dir/server.cpp.o: /home/suhani/web_server/src/server.cpp
-src/CMakeFiles/project_core.dir/server.cpp.o: src/CMakeFiles/project_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/suhani/web_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/project_core.dir/server.cpp.o"
-	cd /home/suhani/web_server/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/project_core.dir/server.cpp.o -MF CMakeFiles/project_core.dir/server.cpp.o.d -o CMakeFiles/project_core.dir/server.cpp.o -c /home/suhani/web_server/src/server.cpp
-
-src/CMakeFiles/project_core.dir/server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/project_core.dir/server.cpp.i"
-	cd /home/suhani/web_server/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/suhani/web_server/src/server.cpp > CMakeFiles/project_core.dir/server.cpp.i
-
-src/CMakeFiles/project_core.dir/server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project_core.dir/server.cpp.s"
-	cd /home/suhani/web_server/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/suhani/web_server/src/server.cpp -o CMakeFiles/project_core.dir/server.cpp.s
-
 # Object files for target project_core
 project_core_OBJECTS = \
 "CMakeFiles/project_core.dir/RequestParser.cpp.o" \
-"CMakeFiles/project_core.dir/main.cpp.o" \
-"CMakeFiles/project_core.dir/server.cpp.o"
+"CMakeFiles/project_core.dir/Server.cpp.o" \
+"CMakeFiles/project_core.dir/main.cpp.o"
 
 # External object files for target project_core
 project_core_EXTERNAL_OBJECTS =
 
 src/libproject_core.a: src/CMakeFiles/project_core.dir/RequestParser.cpp.o
+src/libproject_core.a: src/CMakeFiles/project_core.dir/Server.cpp.o
 src/libproject_core.a: src/CMakeFiles/project_core.dir/main.cpp.o
-src/libproject_core.a: src/CMakeFiles/project_core.dir/server.cpp.o
 src/libproject_core.a: src/CMakeFiles/project_core.dir/build.make
 src/libproject_core.a: src/CMakeFiles/project_core.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/suhani/web_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libproject_core.a"

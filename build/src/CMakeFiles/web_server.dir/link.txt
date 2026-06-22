@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/web_server.dir/main.cpp.o -o web_server   -L/home/suhani/web_server/src/.  -Wl,-rpath,/home/suhani/web_server/src/. libproject_core.a 

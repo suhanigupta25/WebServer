@@ -5,11 +5,9 @@
 #include <unistd.h>
 #include <cstring>
 #include "Server.h"
-#include "RequestParser.cpp"
+#include "RequestParser.h"
 
-class Server{
-    public: 
-        Server(int port){
+        Server::Server(int port){
             socket_fd=socket(AF_INET, SOCK_STREAM, 0);
             if (socket_fd<0){
                 std::cerr <<"socket not available";
@@ -18,7 +16,7 @@ class Server{
             server_addr.sin_port=htons(port);
             server_addr.sin_addr.s_addr=INADDR_ANY;
         }
-        void start(int port){
+        void Server::start(int socket_fd){
             if(bind(socket_fd, (struct sockaddr *)&server_addr, sizeof(server_addr))<0){
                 std::cerr <<"bind failed";
             }
@@ -40,8 +38,12 @@ class Server{
                     std::cout <<"client connected"<<std::endl;
                     char buffer[1024];
                     memset(buffer, 0, sizeof(buffer));
-                    recv(client_socket, buffer, sizeof(buffer), 0);
-                    auto request=Request::parse(std::string(buffer));                    
+                    ssize_t bytes_received=recv(client_socket, buffer, sizeof(buffer), 0);
+                    
+                    std::string raw_request(buffer, bytes_received);
+                    Request req;
+                    auto request = req.parse(raw_request);
+
                     if (request->method=="GET"){
                         std::cout<<"get method called";
                     }
@@ -58,9 +60,9 @@ class Server{
                         std::cerr <<"unsupported method";
                     }
                     shutdown(client_socket, SHUT_WR);
-                    close(client_socket);
                 }
             }
         }
-
-};
+        Server::~Server(){
+            close(socket_fd);
+        }

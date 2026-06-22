@@ -8,7 +8,7 @@ struct Request{
     std::string path;
     std::string version;
 
-    static std::shared_ptr<Request> parse(std::string);
+    static std::shared_ptr<Request> parse(std::string &requestLine);
 
 };
 

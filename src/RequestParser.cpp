@@ -2,7 +2,7 @@
 #include <memory>
 #include "RequestParser.h"
 
-static std::shared_ptr<Request> parse(const std::string &requestLine)
+    std::shared_ptr<Request> Request::parse(std::string &requestLine)
     {
         auto request = std::make_shared<Request>();
         int i = 0;
@@ -19,4 +19,3 @@ static std::shared_ptr<Request> parse(const std::string &requestLine)
         }
         return request;
     }
-

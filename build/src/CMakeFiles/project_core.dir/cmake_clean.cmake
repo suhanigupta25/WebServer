@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/project_core.dir/RequestParser.cpp.o"
   "CMakeFiles/project_core.dir/RequestParser.cpp.o.d"
+  "CMakeFiles/project_core.dir/Server.cpp.o"
+  "CMakeFiles/project_core.dir/Server.cpp.o.d"
   "CMakeFiles/project_core.dir/main.cpp.o"
   "CMakeFiles/project_core.dir/main.cpp.o.d"
-  "CMakeFiles/project_core.dir/server.cpp.o"
-  "CMakeFiles/project_core.dir/server.cpp.o.d"
   "libproject_core.a"
   "libproject_core.pdb"
 )

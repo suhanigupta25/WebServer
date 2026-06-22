@@ -3,11 +3,9 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <cstring>
-#include "server.h"
-#include "server.cpp"
+#include "Server.cpp"
 
 int main(){
-    start_server(8080);
-    
+    Server(8080);
     return 0;
 }

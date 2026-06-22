@@ -79,7 +79,7 @@ clean: src/clean
 
 # Recursive "all" directory target.
 src/all: src/CMakeFiles/project_core.dir/all
-src/all: src/CMakeFiles/project.dir/all
+src/all: src/CMakeFiles/web_server.dir/all
 .PHONY : src/all
 
 # Recursive "preinstall" directory target.
@@ -88,7 +88,7 @@ src/preinstall:
 
 # Recursive "clean" directory target.
 src/clean: src/CMakeFiles/project_core.dir/clean
-src/clean: src/CMakeFiles/project.dir/clean
+src/clean: src/CMakeFiles/web_server.dir/clean
 .PHONY : src/clean
 
 #=============================================================================
@@ -98,7 +98,7 @@ src/clean: src/CMakeFiles/project.dir/clean
 src/CMakeFiles/project_core.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/project_core.dir/build.make src/CMakeFiles/project_core.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/project_core.dir/build.make src/CMakeFiles/project_core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/web_server/build/CMakeFiles --progress-num=3,4,5,6 "Built target project_core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/web_server/build/CMakeFiles --progress-num=1,2,3,4 "Built target project_core"
 .PHONY : src/CMakeFiles/project_core.dir/all
 
 # Build rule for subdir invocation for target.
@@ -118,30 +118,30 @@ src/CMakeFiles/project_core.dir/clean:
 .PHONY : src/CMakeFiles/project_core.dir/clean
 
 #=============================================================================
-# Target rules for target src/CMakeFiles/project.dir
+# Target rules for target src/CMakeFiles/web_server.dir
 
 # All Build rule for target.
-src/CMakeFiles/project.dir/all: src/CMakeFiles/project_core.dir/all
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/project.dir/build.make src/CMakeFiles/project.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/project.dir/build.make src/CMakeFiles/project.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/web_server/build/CMakeFiles --progress-num=1,2 "Built target project"
-.PHONY : src/CMakeFiles/project.dir/all
+src/CMakeFiles/web_server.dir/all: src/CMakeFiles/project_core.dir/all
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/web_server.dir/build.make src/CMakeFiles/web_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/web_server.dir/build.make src/CMakeFiles/web_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/suhani/web_server/build/CMakeFiles --progress-num=5,6 "Built target web_server"
+.PHONY : src/CMakeFiles/web_server.dir/all
 
 # Build rule for subdir invocation for target.
-src/CMakeFiles/project.dir/rule: cmake_check_build_system
+src/CMakeFiles/web_server.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/suhani/web_server/build/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/project.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/web_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/suhani/web_server/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/project.dir/rule
+.PHONY : src/CMakeFiles/web_server.dir/rule
 
 # Convenience name for target.
-project: src/CMakeFiles/project.dir/rule
-.PHONY : project
+web_server: src/CMakeFiles/web_server.dir/rule
+.PHONY : web_server
 
 # clean rule for target.
-src/CMakeFiles/project.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/project.dir/build.make src/CMakeFiles/project.dir/clean
-.PHONY : src/CMakeFiles/project.dir/clean
+src/CMakeFiles/web_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/web_server.dir/build.make src/CMakeFiles/web_server.dir/clean
+.PHONY : src/CMakeFiles/web_server.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

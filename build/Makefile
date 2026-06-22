@@ -130,17 +130,17 @@ project_core/fast:
 .PHONY : project_core/fast
 
 #=============================================================================
-# Target rules for targets named project
+# Target rules for targets named web_server
 
 # Build rule for target.
-project: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 project
-.PHONY : project
+web_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 web_server
+.PHONY : web_server
 
 # fast build rule for target.
-project/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/project.dir/build.make src/CMakeFiles/project.dir/build
-.PHONY : project/fast
+web_server/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/web_server.dir/build.make src/CMakeFiles/web_server.dir/build
+.PHONY : web_server/fast
 
 # Help Target
 help:
@@ -150,8 +150,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... project"
 	@echo "... project_core"
+	@echo "... web_server"
 .PHONY : help
 
 

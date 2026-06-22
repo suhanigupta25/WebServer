@@ -131,18 +131,18 @@ project_core/fast:
 .PHONY : project_core/fast
 
 # Convenience name for target.
-src/CMakeFiles/project.dir/rule:
-	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/project.dir/rule
-.PHONY : src/CMakeFiles/project.dir/rule
+src/CMakeFiles/web_server.dir/rule:
+	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/web_server.dir/rule
+.PHONY : src/CMakeFiles/web_server.dir/rule
 
 # Convenience name for target.
-project: src/CMakeFiles/project.dir/rule
-.PHONY : project
+web_server: src/CMakeFiles/web_server.dir/rule
+.PHONY : web_server
 
 # fast build rule for target.
-project/fast:
-	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project.dir/build.make src/CMakeFiles/project.dir/build
-.PHONY : project/fast
+web_server/fast:
+	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/web_server.dir/build.make src/CMakeFiles/web_server.dir/build
+.PHONY : web_server/fast
 
 RequestParser.o: RequestParser.cpp.o
 .PHONY : RequestParser.o
@@ -168,13 +168,37 @@ RequestParser.cpp.s:
 	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project_core.dir/build.make src/CMakeFiles/project_core.dir/RequestParser.cpp.s
 .PHONY : RequestParser.cpp.s
 
+Server.o: Server.cpp.o
+.PHONY : Server.o
+
+# target to build an object file
+Server.cpp.o:
+	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project_core.dir/build.make src/CMakeFiles/project_core.dir/Server.cpp.o
+.PHONY : Server.cpp.o
+
+Server.i: Server.cpp.i
+.PHONY : Server.i
+
+# target to preprocess a source file
+Server.cpp.i:
+	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project_core.dir/build.make src/CMakeFiles/project_core.dir/Server.cpp.i
+.PHONY : Server.cpp.i
+
+Server.s: Server.cpp.s
+.PHONY : Server.s
+
+# target to generate assembly for a file
+Server.cpp.s:
+	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project_core.dir/build.make src/CMakeFiles/project_core.dir/Server.cpp.s
+.PHONY : Server.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
 	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project_core.dir/build.make src/CMakeFiles/project_core.dir/main.cpp.o
-	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project.dir/build.make src/CMakeFiles/project.dir/main.cpp.o
+	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/web_server.dir/build.make src/CMakeFiles/web_server.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -183,7 +207,7 @@ main.i: main.cpp.i
 # target to preprocess a source file
 main.cpp.i:
 	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project_core.dir/build.make src/CMakeFiles/project_core.dir/main.cpp.i
-	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project.dir/build.make src/CMakeFiles/project.dir/main.cpp.i
+	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/web_server.dir/build.make src/CMakeFiles/web_server.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -192,32 +216,8 @@ main.s: main.cpp.s
 # target to generate assembly for a file
 main.cpp.s:
 	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project_core.dir/build.make src/CMakeFiles/project_core.dir/main.cpp.s
-	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project.dir/build.make src/CMakeFiles/project.dir/main.cpp.s
+	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/web_server.dir/build.make src/CMakeFiles/web_server.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-server.o: server.cpp.o
-.PHONY : server.o
-
-# target to build an object file
-server.cpp.o:
-	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project_core.dir/build.make src/CMakeFiles/project_core.dir/server.cpp.o
-.PHONY : server.cpp.o
-
-server.i: server.cpp.i
-.PHONY : server.i
-
-# target to preprocess a source file
-server.cpp.i:
-	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project_core.dir/build.make src/CMakeFiles/project_core.dir/server.cpp.i
-.PHONY : server.cpp.i
-
-server.s: server.cpp.s
-.PHONY : server.s
-
-# target to generate assembly for a file
-server.cpp.s:
-	cd /home/suhani/web_server/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/project_core.dir/build.make src/CMakeFiles/project_core.dir/server.cpp.s
-.PHONY : server.cpp.s
 
 # Help Target
 help:
@@ -227,17 +227,17 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... project"
 	@echo "... project_core"
+	@echo "... web_server"
 	@echo "... RequestParser.o"
 	@echo "... RequestParser.i"
 	@echo "... RequestParser.s"
+	@echo "... Server.o"
+	@echo "... Server.i"
+	@echo "... Server.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
 .PHONY : help
 
 

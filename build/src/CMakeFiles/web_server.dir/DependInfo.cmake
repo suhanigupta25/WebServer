@@ -8,9 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/suhani/web_server/src/RequestParser.cpp" "src/CMakeFiles/project_core.dir/RequestParser.cpp.o" "gcc" "src/CMakeFiles/project_core.dir/RequestParser.cpp.o.d"
-  "/home/suhani/web_server/src/Server.cpp" "src/CMakeFiles/project_core.dir/Server.cpp.o" "gcc" "src/CMakeFiles/project_core.dir/Server.cpp.o.d"
-  "/home/suhani/web_server/src/main.cpp" "src/CMakeFiles/project_core.dir/main.cpp.o" "gcc" "src/CMakeFiles/project_core.dir/main.cpp.o.d"
+  "/home/suhani/web_server/src/main.cpp" "src/CMakeFiles/web_server.dir/main.cpp.o" "gcc" "src/CMakeFiles/web_server.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
