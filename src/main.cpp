@@ -7,5 +7,6 @@
 
 int main(){
     Server(8080);
+    void start();
     return 0;
 }

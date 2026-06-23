@@ -16,15 +16,15 @@
             server_addr.sin_port=htons(port);
             server_addr.sin_addr.s_addr=INADDR_ANY;
         }
-        void Server::start(int socket_fd){
+        void Server::start(){
             if(bind(socket_fd, (struct sockaddr *)&server_addr, sizeof(server_addr))<0){
-                std::cerr <<"bind failed";
+                perror("bind");
             }
             else{
                 std::cout <<"server started on port "<<ntohs(server_addr.sin_port)<<std::endl;
             }
             if(listen(socket_fd, 10)<0){
-                std::cerr <<"listen failed";
+                perror("listen");
             }
             else{
                 std::cout <<"listening for connections..."<<std::endl;

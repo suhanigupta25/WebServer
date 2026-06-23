@@ -12,7 +12,7 @@ class Server{
         struct sockaddr_in server_addr;
 
         Server(int port);
-        void start(int socket_fd);
+        void start();
         ~Server();
         
 };
