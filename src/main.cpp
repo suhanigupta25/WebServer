@@ -1,9 +1,4 @@
-#include <iostream>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <unistd.h>
-#include <cstring>
-#include "Server.cpp"
+#include "Server.h"
 
 int main(){
     Server server(8080);
