@@ -6,7 +6,8 @@
 #include "Server.cpp"
 
 int main(){
-    Server(8080);
-    void start();
+    Server server(8080);
+    server.start();
+    
     return 0;
 }
