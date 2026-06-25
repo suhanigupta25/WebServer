@@ -2,8 +2,6 @@
 #define SERVER_H
 
 #include <sys/socket.h>
-#include <netinet/in.h>
-#include <unistd.h>
 #include <cstring>
 
 class Server{
