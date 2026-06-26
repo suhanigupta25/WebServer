@@ -2,9 +2,7 @@
 #include "./http/RequestParser.h"
 #include <iostream>
 
-
-
-std::string Client_Socket_Formation(int client_socket_fd,){
+std::string recieveRequest(int client_socket_fd,char buffer[]){
     ssize_t bytes_received=recv(client_socket_fd, buffer, sizeof(buffer), 0);
     std::string raw_request(buffer, bytes_received);
 }

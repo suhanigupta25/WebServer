@@ -3,18 +3,21 @@
 
 #include <sys/socket.h>
 #include <unistd.h>
+#include <string>
+#include <cstring>
 
 class Client_Socket{
     public:
         int client_socket_fd;
         char buffer [1024];
-        memset(buffer, 0, sizeof(buffer));
         ssize_t bytes_received;
 
-        std::string Client_Socket_Formation(int client_socket_fd);
+        Client_Socket(int client_socket_fd){
+            memset(buffer, 0, sizeof(buffer));
+        };
+        std::string receiveRequest();
         void parseRequest(std::string raw_request);
         ~Client_Socket();
-
         
 };
 #endif

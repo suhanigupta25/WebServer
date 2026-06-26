@@ -1,15 +1,21 @@
 #ifndef THREADPOOL_H
 #define THREADPOOL_H
 
-class ThreadPool{
-    public: 
-        ThreadPool(size_t threads);
-        void enqueue(std::function<void()> task);
-        //pool.push([client_socket]){
-        //handleclient();}
+#include <sys/socket.h>
+class ThreadPool {
+public:
+    ThreadPool(size_t numThreads);
 
-        ~ThreadPool();
+    void enqueue(std::function<void()> task);
+
+    ~ThreadPool();
+
+private:
+    std::vector<std::thread> workers;
+    std::queue<std::function<void()>> tasks;
+
+    std::mutex mutex;
+    std::condition_variable cv;
 };
 
 #endif
-
