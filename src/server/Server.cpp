@@ -4,6 +4,7 @@
 #include "Server.h"
 #include "RequestParser.h"
 #include "Client_Socket.h"
+#include "concurrency/Threadpool.h"
 
         Server::Server(int port){
             socket_fd=socket(AF_INET, SOCK_STREAM, 0);
@@ -33,6 +34,10 @@
                     std::cerr <<"client accept failed";
                 }
                 else{
+                    ThreadPool::ThreadPool(4);
+                    ThreadPool.enqueue([this, client_socket_fd]() {
+                            ThreadPool.handleClients(client_socket_fd);
+                    });
                     Client_Socket::Client_Socket_Formation(int client_socket_fd);      
                     std::cout <<"client connected"<<std::endl;                                  
                 }

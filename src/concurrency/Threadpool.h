@@ -21,6 +21,7 @@ public:
     ThreadPool(size_t numThreads);
 
     void enqueue(std::function<void()> task);
+    void handleClients(int client_socket);
 
     ~ThreadPool();
 };
